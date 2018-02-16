@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Description</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body background="bg.jpg">
+
+<h2 class="w3-center" style="font-family:questa;">Tourist Spot</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="bo.jpg" style="width:100%">
+  <img class="mySlides" src="bor.jpg" style="width:100%">
+  <img class="mySlides" src="bora.jpg" style="width:100%">
+  <img class="mySlides" src="borac.jpg" style="width:100%">
+  <p><b><font color="white">Boracay is a small island in the Philippines located approximately 315 km (196 mi) south of Manila and 2 km off the northwest tip of Panay Island in Western Visayas region of the Philippines. Boracay Island and its beaches have received awards from numerous travel publications and agencies.[Note 1] The island comprises the barangays of Manoc-Manoc, Balabag, and Yapak in the municipality of Malay, in Aklan Province. The island is administered by the Tourism Infrastructure and Enterprise Zone Authority and the provincial government of Aklan. Apart from its white sand beaches, Boracay is also famous for being one of the world's top destinations for relaxation.[11][12] As of 2013 it was emerging among the top destinations for tranquility and nightlife</b></font></p>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

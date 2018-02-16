@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: white;
+}
+</style>
+</head>
+<body background="hd.jpg">
+
+
+<h2 style="font-size:4vw;">Tourist Spot</h2>
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tourist spot.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Tourist</th>
+    <th style="width:40%;">Description</th>
+  </tr>
+  <tr>
+	<td><a href="file:///C:/Users/Jkingxx/Desktop/RealS/NEW.HTM">Boracay</a> </td>
+	 <td>White Sand Beach</td> 
+	<td>
+<img src="3.jpg" alt="The Beach" width="250" height="150" />
+</td>
+  </tr>
+  <tr>
+    <td>Vigan</td>
+    <td>Home of Empanadas</td>
+		<td>
+<img src="4.jpg" alt="The City" width="250" height="150" />
+</td>
+  </tr>
+  <tr>
+    <td>Palawan</td>
+    <td>Underground River</td>
+		<td>
+<img src="5.jpg" alt="The City" width="250" height="150" />
+</td>
+  </tr>
+  <tr>
+    <td>Siargao</td>
+    <td>Surf Capital</td>
+		<td>
+<img src="6.jpg" alt="The City" width="250" height="150" />
+</td>
+  </tr>
+  <tr>
+    <td>Pangasinan</td>
+    <td>Famous Puto Calasiao</td>
+		<td>
+<img src="7.jpg" alt="The City" width="250" height="150" />
+</td>
+  </tr>
+  <tr>
+    <td>Manila</td>
+    <td>Capital of the Philippines</td>
+		<td>
+<img src="8.jpg" alt="The City" width="250" height="150" />
+</td>
+  </tr>
+  <tr>
+    <td>Alabat Quezon</td>
+    <td>Sawsawan Island</td>
+		<td>
+<img src="9.jpg" alt="The City" width="250" height="150" />
+</td>
+  </tr>
+  <tr>
+    <td>Baguio City</td>
+    <td>Known for Strawberries</td>
+		<td>
+<img src="11.jpg" alt="The City" width="250" height="150" />
+</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
